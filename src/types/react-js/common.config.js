@@ -7,11 +7,11 @@ const { CheckerPlugin } = require('awesome-typescript-loader')
 const Dotenv = require('dotenv-webpack')
 
 const { PATHS, REGEXPS } = require('../../constants')
-const { getViewARConfig } = require('../../utils')
+const { getStackR23Config } = require('../../utils')
 const babelLoader = require('../../babel-loader.config') // also includes 'source-map-loader'
 const { resolve } = require('../../webpack.config.resolve.js')
 
-const { appId, appVersion } = getViewARConfig()
+const { appId, appVersion } = getStackR23Config()
 
 const getCommonConfig = (env) =>
   merge([
@@ -40,6 +40,7 @@ const getCommonConfig = (env) =>
                 },
               },
               {
+                // TODO: CHECK if needed see issue #3 (localIdentName/getLocalIdent)
                 loader:  'css-loader',
                 options: {
                   importLoaders: 1,
@@ -71,10 +72,9 @@ const getCommonConfig = (env) =>
                   sourceMap:   true,
                   sassOptions: {
                     includePaths: [
-                      './sass', // default viewar structure
+                      './sass',
                       `${path.basename(PATHS.src)}/sass`,
                       './css', // ! compatibility with old setting
-                      // enables `@import 'viewar-styles'`
                       // TODO: ? use sass-resource-loader
                       PATHS.componentSass,
                     ],

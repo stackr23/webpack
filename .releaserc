@@ -1,6 +1,6 @@
 {
   "branches": ["master"],
-  "repositoryUrl": "https://github.com/viewar/webpack",
+  "repositoryUrl": "https://github.com/stackr23/webpack",
   "plugins": [
    [
     "@semantic-release/commit-analyzer",
