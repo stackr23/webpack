@@ -2,10 +2,7 @@
 const { join } = require('path')
 const { CheckerPlugin } = require('awesome-typescript-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
-const path = require('path')
 
 const { getViewARConfig } = require('../../utils')
 const { PATHS } = require('../../constants')
