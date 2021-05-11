@@ -13,9 +13,8 @@ describe('<App />', function() {
   })
 
   it('renders with child component <Test foo="foo" />', function() {
-    expect(wrapper).to.contain(<Test foo="bar" />)
-    expect(wrapper).to.not.contain(<Test foo="foo" />)
+    expect(wrapper).to.contain(<Test content="PLACEHOLDER" />)
 
-    expect(wrapper).to.have.descendants('#foo')
+    expect(wrapper).to.have.descendants('#test_content')
   })
 })

@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const Test = ({ foo }) => {
+const Test = ({ content }) => {
   return (
     <div id="test_wrapper">
-      <div id="foo">{foo}</div>
+      <div id="test_content">{content}</div>
     </div>
   )
 }
 
 Test.propTypes = {
-  foo: PropTypes.string.isRequired,
+  content: PropTypes.any.isRequired,
 }
 
 export default Test

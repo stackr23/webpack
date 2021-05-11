@@ -13,7 +13,7 @@ class App extends PureComponent {
     return (
       <>
         <h1 id="app_headline">@stackr23/webpack up and running!</h1>
-        <Test foo="bar" />
+        <Test content="PLACEHOLDER" />
       </>
     )
   }

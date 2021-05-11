@@ -6,7 +6,7 @@ const { enzyme: { shallow }, chai: { expect }} = global
 
 describe('Test', function() {
   it('renders without problems', function() {
-    const wrapper = shallow(<TestComponent foo="bar" />)
-    expect(wrapper.find('#foo')).to.contain.text('bar')
+    const wrapper = shallow(<TestComponent content="PLACEHOLDER" />)
+    expect(wrapper.find('#test_content')).to.contain.text('PLACEHOLDER')
   })
 })
