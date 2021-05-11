@@ -1,7 +1,7 @@
 {
-  "name": "@viewar/webpack",
-  "version": "1.13.2",
-  "description": "shared webpack config of ViewAR",
+  "name": "@stackr23/webpack",
+  "version": "1.0.0",
+  "description": "shared webpack config of StackR23",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf build && rimraf bundle",
@@ -14,13 +14,13 @@
     "lint": "cross-env WEBPACK_PATH=test eslint --fix \"**/*.*{js,jsx}\" --ignore-pattern \"build/**/*\"",
     "format": "prettier **/*.{css,scss,md,json} --write"
   },
-  "homepage": "https://viewar.com/",
+  "homepage": "https://github.com/stackr23",
   "repository": {
     "type": "git",
-    "url": "https://github.com/viewar/webpack"
+    "url": "https://github.com/stackr23/webpack"
   },
   "bugs": {
-    "url": "https://github.com/viewar/webpack/issues"
+    "url": "https://github.com/stackr23/webpack/issues"
   },
   "private": false,
   "publishConfig": {
@@ -28,10 +28,10 @@
     "tag": "latest"
   },
   "keywords": [
-    "viewar",
+    "StackR23",
     "webpack",
-    "config",
-    "shared"
+    "shared",
+    "config"
   ],
   "engines": {
     "node": ">=10.13.0"
@@ -49,7 +49,7 @@
       "eslint --fix --quiet"
     ]
   },
-  "author": "Stefan Friedl <sf@viewar.com>",
+  "author": "DoubleU23 <5007050+DoubleU23@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.8.4",
