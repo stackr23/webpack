@@ -3,11 +3,11 @@ const ip = require('ip').address()
 const webpack = require('webpack')
 
 const viewArMiddleware = require('../../middlewares')
-const { setEnvVariable, printLaunchQRCode } = require('../../utils')
+const { setEnvVariable } = require('../../utils')
 const { PATHS, PORT } = require('../../constants')
 
 const getDevelopConfig = () => {
-  printLaunchQRCode(ip, PORT)
+  // printLaunchQRCode(ip, PORT)
   setEnvVariable('process.env.NODE_ENV', 'development')
 
   return merge([

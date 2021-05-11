@@ -7,11 +7,8 @@ const { CheckerPlugin } = require('awesome-typescript-loader')
 const Dotenv = require('dotenv-webpack')
 
 const { PATHS, REGEXPS } = require('../../constants')
-const { getStackR23Config } = require('../../utils')
 const babelLoader = require('../../babel-loader.config') // also includes 'source-map-loader'
 const { resolve } = require('../../webpack.config.resolve.js')
-
-const { appId, appVersion } = getStackR23Config()
 
 const getCommonConfig = (env) =>
   merge([
@@ -128,9 +125,7 @@ const getCommonConfig = (env) =>
               return require.resolve(path.join(PATHS.src, 'index.html.ejs'))
             }
           })(),
-          inject:           true,
-          bundleIdentifier: appId,
-          bundleVersion:    appVersion,
+          inject: true,
         }),
         new Dotenv(),
       ],

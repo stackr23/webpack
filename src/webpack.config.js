@@ -44,14 +44,11 @@ const getWebpackConfig = (env, args = {}) => {
     default:
       throw new Error(`type ${args.type} not supported yet.`)
   }
-};
+}
 
 // TODO: fix to sync instead of async (for 3rd party usage like nextjs and others)
-(async () => {
-  // process.NODE_ENV might not be set. Checking for WEBPACK_DEV_SERVER is safer.
-  if (process.env.WEBPACK_DEV_SERVER) {
-    await errorOnUsedPort()
-  }
-})()
+// eslint-disable-next-line no-process-exit
+errorOnUsedPort().catch((e) => process.exit(1))
+
 
 module.exports = getWebpackConfig
