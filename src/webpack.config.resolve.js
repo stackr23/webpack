@@ -11,7 +11,7 @@ try {
   resolveConfigIsPresent = true
 
   if (process.env.DEBUG) {
-    console.log('\n[@viewar/webpack] workspaceRoot/webpack.config.resolve.js is PRESENT, so we USE this config\n\n')
+    console.log('\n[@stackr23/webpack] workspaceRoot/webpack.config.resolve.js is PRESENT, so we USE this config\n\n')
   }
 }
 catch (e) {
@@ -32,13 +32,13 @@ if (!resolveConfigIsPresent) {
     tsconfigIsPresent = true
 
     if (process.env.DEBUG) {
-      console.log('\n[@viewar/webpack] tsconfig is PRESENT, so we USE \'tsconfig-paths-webpack-plugin\'\n\n')
+      console.log('\n[@stackr23/webpack] tsconfig is PRESENT, so we USE \'tsconfig-paths-webpack-plugin\'\n\n')
     }
   }
   catch (e) {
     tsconfigIsPresent = false
     if (process.env.DEBUG) {
-      console.log('\n[@viewar/webpack] tsconfig is NOT PRESENT, so we DON\'T USE \'tsconfig-paths-webpack-plugin\'\n\n')
+      console.log('\n[@stackr23/webpack] tsconfig is NOT PRESENT, so we DON\'T USE \'tsconfig-paths-webpack-plugin\'\n\n')
     }
   }
 

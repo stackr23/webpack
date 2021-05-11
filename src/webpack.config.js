@@ -1,10 +1,8 @@
 const { errorOnUsedPort, setEnvVariable } = require('./utils')
 
 const TYPE = {
-  TYPE_REACT_JS:   'react-js', // Default (fallback) value.
-  TYPE_REACT_TS:   'react-ts',
-  TYPE_ANGULAR:    'angular',
-  TYPE_ANGULAR_JS: 'angularjs',
+  REACT:   'react-js', // TODO: rename to just 'react'
+  ANGULAR:    'angular',
 }
 
 const setEnvironment = (env) => {
@@ -22,7 +20,7 @@ const setEnvironment = (env) => {
 
 /**
  * @function
- * @file @viewar/webpack/webpack.config.js
+ * @file @stackr23/webpack/webpack.config.js
  * @name getMergedConfig
  * @returns {Promise} webpack config
  */
@@ -35,18 +33,14 @@ const getWebpackConfig = (env, args = {}) => {
   setEnvironment(env)
 
   // Decide which config to load according to app.
-  const type = args.type || TYPE.TYPE_REACT_JS
+  const type = args.type || TYPE.REACT
   process.env.WEBPACK_TYPE = type
 
-  let reactJs
-  let reactTs
+  let webpackVariation
   switch (type) {
-    case TYPE.TYPE_REACT_JS:
-      reactJs = require('./types/react-js')
-      return reactJs(env)
-    case TYPE.TYPE_REACT_TS:
-      reactTs = require('./types/react-ts')
-      return reactTs(env)
+    case TYPE.REACT:
+      webpackVariation = require('./types/react-js')
+      return webpackVariation(env)
     default:
       throw new Error(`type ${args.type} not supported yet.`)
   }

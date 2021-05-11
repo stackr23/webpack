@@ -22,7 +22,7 @@ module.exports = (config) => {
   preprocessors['src/**/*.js'] = [ 'webpack', 'sourcemap' ]
   // for app development
   preprocessors[PATHS.src + '/**/*.js'] = [ 'webpack', 'sourcemap' ]
-  preprocessors['node_modules/@viewar/webpack/**/*.js'] = [ 'webpack', 'sourcemap' ]
+  preprocessors['node_modules/@stackr23/webpack/**/*.js'] = [ 'webpack', 'sourcemap' ]
   preprocessors['node_modules/core-js/**/index.js'] = [ 'webpack', 'sourcemap' ]
 
   // ChromeHeadless - set path for binary

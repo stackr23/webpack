@@ -4,16 +4,14 @@
 
 # [1.13.0](https://github.com/viewar/webpack/compare/v1.12.3...v1.13.0) (2020-04-29)
 
-
 ### Bug Fixes
 
-* **resolve-config:** check if tsconfig is present ([f7ca3da](https://github.com/viewar/webpack/commit/f7ca3da80f247ad608da3f22f858c7e2d06eb3b5))
-* **deps:** ship missing dependencies ([#149](https://github.com/viewar/webpack/issues/149)) ([126c790](https://github.com/viewar/webpack/commit/126c790847b31c7e90f55a65dec8a30e4a4c6dc9)), closes [#124](https://github.com/viewar/webpack/issues/124) [#148](https://github.com/viewar/webpack/issues/148)
-
+- **resolve-config:** check if tsconfig is present ([f7ca3da](https://github.com/viewar/webpack/commit/f7ca3da80f247ad608da3f22f858c7e2d06eb3b5))
+- **deps:** ship missing dependencies ([#149](https://github.com/viewar/webpack/issues/149)) ([126c790](https://github.com/viewar/webpack/commit/126c790847b31c7e90f55a65dec8a30e4a4c6dc9)), closes [#124](https://github.com/viewar/webpack/issues/124) [#148](https://github.com/viewar/webpack/issues/148)
 
 ### Features
 
-* **resolve-config:** enable to overwrite default resolve config ([bba60af](https://github.com/viewar/webpack/commit/bba60afdd4c40567021ffa5ad39009f922042818)), closes [#52](https://github.com/viewar/webpack/issues/52)
+- **resolve-config:** enable to overwrite default resolve config ([bba60af](https://github.com/viewar/webpack/commit/bba60afdd4c40567021ffa5ad39009f922042818)), closes [#52](https://github.com/viewar/webpack/issues/52)
 
 ## [1.12.3](https://github.com/viewar/webpack/compare/v1.12.2...v1.12.3) (2020-04-16)
 
@@ -112,13 +110,13 @@
 
 ### Bug Fixes
 
-- **errorOnUsedPort:** make '@viewar/webpack' SYNC! ([8bf5520](https://github.com/viewar/webpack/commit/8bf5520))
-- **errorOnUsedPort:** make '@viewar/webpack' SYNC! ([115a4e0](https://github.com/viewar/webpack/commit/115a4e0))
+- **errorOnUsedPort:** make '@stackr23/webpack' SYNC! ([8bf5520](https://github.com/viewar/webpack/commit/8bf5520))
+- **errorOnUsedPort:** make '@stackr23/webpack' SYNC! ([115a4e0](https://github.com/viewar/webpack/commit/115a4e0))
 
 ### Features
 
-- **middlewares:** provide '@viewar/webpack/middlewares' ([#68](https://github.com/viewar/webpack/issues/68)) ([25fb80e](https://github.com/viewar/webpack/commit/25fb80e))
-- **middlewares:** provide '@viewar/webpack/middlewares' ([#68](https://github.com/viewar/webpack/issues/68)) ([c9c42fa](https://github.com/viewar/webpack/commit/c9c42fa))
+- **middlewares:** provide '@stackr23/webpack/middlewares' ([#68](https://github.com/viewar/webpack/issues/68)) ([25fb80e](https://github.com/viewar/webpack/commit/25fb80e))
+- **middlewares:** provide '@stackr23/webpack/middlewares' ([#68](https://github.com/viewar/webpack/issues/68)) ([c9c42fa](https://github.com/viewar/webpack/commit/c9c42fa))
 
 # [1.6.0](https://github.com/viewar/webpack/compare/v1.5.4...v1.6.0) (2019-11-23)
 
@@ -144,7 +142,7 @@
 
 ### Bug Fixes
 
-- **karma:** export config via '@viewar/webpack/karma' ([dc14f9d](https://github.com/viewar/webpack/commit/dc14f9d))
+- **karma:** export config via '@stackr23/webpack/karma' ([dc14f9d](https://github.com/viewar/webpack/commit/dc14f9d))
 
 ## [1.5.2](https://github.com/viewar/webpack/compare/v1.5.1...v1.5.2) (2019-11-08)
 
@@ -256,7 +254,7 @@
 ### Features
 
 - **eslint-import-resolver:** resolve WEBPACK_PATH per dotenv ([46b8eef](https://github.com/viewar/webpack/commit/46b8eef))
-- **remoteConsole:** `import {remoteConsoleInjector} from '@viewar/webpack/remoteConsole` ([db50df6](https://github.com/viewar/webpack/commit/db50df6))
+- **remoteConsole:** `import {remoteConsoleInjector} from '@stackr23/webpack/remoteConsole` ([db50df6](https://github.com/viewar/webpack/commit/db50df6))
 - **semantic-release:** release to GITHUB and push to BB ([b039af6](https://github.com/viewar/webpack/commit/b039af6))
 - add 'lint-staged' ([3ea0890](https://github.com/viewar/webpack/commit/3ea0890))
 - add circleCI config ([7662655](https://github.com/viewar/webpack/commit/7662655))

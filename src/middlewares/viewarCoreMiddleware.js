@@ -6,7 +6,7 @@ const UAParser = require('express-useragent')
  * @name viewarCoreMiddleware
  * @desc middleware for 'webpack-dev-server'
  * delivers '/viewar-core.js' on dev server (only for web version)
- * @memberof @viewar/webpack
+ * @memberof @stackr23/webpack
  *
  * @param {Express.Application} app - instance of express.js server
  * @return {void}

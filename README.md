@@ -1,4 +1,4 @@
-# @viewar/webpack
+# @stackr23/webpack
 
 [![Build Status](https://travis-ci.com/viewar/webpack.svg?branch=master)](https://travis-ci.com/viewar/webpack)
 [![PRs Welcome][pr-welcome]](http://makeapullrequest.com)<br />
@@ -31,7 +31,7 @@
 
 ## Installation
 
-`npm i @viewar/webpack`
+`npm i @stackr23/webpack`
 
 > **includes all packages related to webpack:**  
 > \*-loader's, babel-presets/plugins, typescript-presets/plugins, karma-plugins + puppeteer, sass/postcss, etc.
@@ -45,14 +45,14 @@
 
 ```javascript
 // webpack.config.js
-module.exports = require('@viewar/webpack');
+module.exports = require('@stackr23/webpack');
 ```
 
 **node - extended**
 
 ```jsx
 // webpack.config.js
-const configViewAr = require('@viewar/webpack');
+const configViewAr = require('@stackr23/webpack');
 
 module.exports = (env) => {
   const config = configViewAr(env);
@@ -64,7 +64,7 @@ module.exports = (env) => {
 
 **node - project types**
 
-@viewar/webpack is able to handle different types of projects:
+@stackr23/webpack is able to handle different types of projects:
 
 - "react-js": React with Javascript (default)
 - ~~"react-ts": React with Typescript~~ (deprecated)
@@ -73,7 +73,7 @@ module.exports = (env) => {
 
 ```jsx
 // webpack.config.js
-const configViewAr = require('@viewar/webpack');
+const configViewAr = require('@stackr23/webpack');
 
 module.exports = (env) => {
   // Use react with typescript as project type.
@@ -85,8 +85,8 @@ module.exports = (env) => {
 
 **cli**
 
-`webpack-dev --config ./node_modules/@viewar/webpack` or  
-`webpack-dev-server --config ./node_modules/@viewar/webpack`
+`webpack-dev --config ./node_modules/@stackr23/webpack` or  
+`webpack-dev-server --config ./node_modules/@stackr23/webpack`
 
 ## Constants
 
@@ -131,7 +131,7 @@ module.exports = (env) => {
 
 ```javascript
 // on client
-import { remoteConsoleInjector } from '@viewar/webpack/remoteConsole';
+import { remoteConsoleInjector } from '@stackr23/webpack/remoteConsole';
 
 remoteConsoleInjector();
 ```
@@ -155,7 +155,7 @@ before exporting the config,
 
 **Usage**  
 `npm i karma --save-dev`
-`npx karma start ./node_modules/@viewar/webpack/karma`
+`npx karma start ./node_modules/@stackr23/webpack/karma`
 
 **Explanation**  
 [Karma](https://karma-runner.github.io/latest/index.html) is a test runner for JavaScript applications with several features integrated:
