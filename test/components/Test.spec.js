@@ -4,8 +4,8 @@ import TestComponent from './Test'
 
 const { enzyme: { shallow }, chai: { expect }} = global
 
-describe('Test', function() {
-  it('renders without problems', function() {
+describe('TestComponent', function() {
+  it('renders with \'content="PLACEHOLDER"\'', function() {
     const wrapper = shallow(<TestComponent content="PLACEHOLDER" />)
     expect(wrapper.find('#test_content')).to.contain.text('PLACEHOLDER')
   })
