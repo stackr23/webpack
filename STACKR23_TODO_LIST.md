@@ -1,25 +1,20 @@
 # STACKR23 TODO LIST
 
-## UTILS - MONOREPO !?
+## UTILS - monorepo
 
-> https://blog.bitsrc.io/11-tools-to-build-a-monorepo-in-2021-7ce904821cc2
+### @stackr23/logger
 
-### use [BIT.dev](https://bit.dev/) !?
-
-### or [NPM WOrkspaces](https://dev.to/limal/simplify-your-monorepo-with-npm-7-workspaces-5gmj)
+- [x] passing options to constructor
+- [x] CLEAN UP
+- [x] RE-PUBLISH!
+- [ ] UPDATE DOCS
+- [ ] move to monorepo 'utils'
 
 ### MRM
 
 - move mrm-preset to stackr23
 - finish mrm preset
 - use to setup CI / release process
-
-### @stackr23/logger
-
-- [x] passing options to constructor
-- [ ] CLEAN UP
-- [ ] UPDATE DOCS
-- [ ] RE-PUBLISH!
 
 ## STACK MODULES
 
@@ -34,5 +29,5 @@
 
 > **!config-eslint - tslint / prettier / usw...**
 
-- [ ] sterilize @viewar/config-eslint
-- [ ] CLEAN and RE-PUBLISH
+- [x] sterilize @viewar/config-eslint
+- [x] CLEAN and RE-PUBLISH

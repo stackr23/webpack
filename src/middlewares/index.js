@@ -1,9 +1,7 @@
 const remoteConsoleMiddleware = require('../utils/remoteConsole/remoteConsoleMiddleware')
-const viewarCoreMiddleware = require('./viewarCoreMiddleware')
 
-const viewArMiddleware = (app) => {
+const stackr23Middlewares = (app) => {
   remoteConsoleMiddleware(app)
-  viewarCoreMiddleware(app)
 }
 
-module.exports = viewArMiddleware
+module.exports = stackr23Middlewares

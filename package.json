@@ -124,7 +124,7 @@
     "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
-    "@viewar/config-eslint": "^1.10.0",
+    "@stackr23/config-eslint": "^2.0.0",
     "chalk": "^4.0.0",
     "cheerio": "^1.0.0-rc.3",
     "classnames": "^2.2.6",

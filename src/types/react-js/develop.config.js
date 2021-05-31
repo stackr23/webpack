@@ -2,7 +2,7 @@ const merge = require('webpack-merge')
 const ip = require('ip').address()
 const webpack = require('webpack')
 
-const viewArMiddleware = require('../../middlewares')
+const stackr23Middlewares = require('../../middlewares')
 const { setEnvVariable } = require('../../utils')
 const { PATHS, PORT } = require('../../constants')
 
@@ -13,7 +13,7 @@ const getDevelopConfig = () => {
   return merge([
     {
       devServer: {
-        'public':      ip ? `${ip}:${PORT}` : null,
+        'public':    ip ? `${ip}:${PORT}` : null,
         host:        process.env.HOST || '0.0.0.0',
         port:        PORT,
         contentBase: PATHS.build,
@@ -22,7 +22,7 @@ const getDevelopConfig = () => {
           warnings: false,
           errors:   true,
         },
-        before: viewArMiddleware,
+        before: stackr23Middlewares,
       },
       devtool: 'inline-source-map',
       output:  {
