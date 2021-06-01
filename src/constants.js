@@ -11,8 +11,6 @@ const PATHS   = {
   // TODO: rename marked as webpack root
   src:             path.join(ROOT, WEBPACK_PATH || 'src'),
   assets:          path.join(ROOT, WEBPACK_ASSETS || 'assets'),
-  componentAssets: path.join(ROOT, 'node_modules/@viewar/components/dist/assets'),
-  componentSass:   './node_modules/@viewar/components/dist/sass',
 }
 
 const PORT = WEBPACK_PORT || '8080'

@@ -1,5 +1,4 @@
 const path = require('path')
-const loaderUtils = require('loader-utils')
 const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -30,32 +29,8 @@ const getCommonConfig = (env) =>
           {
             test: /\.s?css$/,
             use:  [
-              {
-                loader:  'style-loader',
-                options: {
-                  injectType: 'singletonStyleTag',
-                },
-              },
-              {
-                // TODO: CHECK if needed see issue #3 (localIdentName/getLocalIdent)
-                loader:  'css-loader',
-                options: {
-                  importLoaders: 1,
-                  modules:       {
-                    // development - prefix css classnames of @viewar modules
-                    // which are compiled at runtime - f.e. @viewar/components/dist/sass/viewar-styles
-                    // TODO: production - use hash
-                    // localIdentName: env === 'production' ? '[hash:base64:5]' : null,
-                    getLocalIdent: (context, localIdentName, localName, options) => {
-                      const isViewar = ~context.resourcePath.indexOf('@viewar')
-
-                      let name = `[name]-${localName}`
-                      name = (isViewar ? 'viewar-' : '') + name
-                      return loaderUtils.interpolateName(context, name, options)
-                    },
-                  },
-                },
-              },
+              { loader: 'style-loader', options: { injectType: 'singletonStyleTag' }},
+              { loader: 'css-loader', options: { importLoaders: 2 }},
               {
                 loader:  'postcss-loader',
                 options: {
@@ -73,7 +48,7 @@ const getCommonConfig = (env) =>
                       `${path.basename(PATHS.src)}/sass`,
                       './css', // ! compatibility with old setting
                       // TODO: ? use sass-resource-loader
-                      PATHS.componentSass,
+                      // TODO: apply @stackr23/stylus
                     ],
                   },
                 },
@@ -82,7 +57,7 @@ const getCommonConfig = (env) =>
           },
           {
             test:    REGEXPS.assets,
-            exclude: PATHS.componentAssets,
+            // exclude: PATHS.componentAssets,
             use:     {
               loader:  'file-loader',
               options: {
@@ -94,7 +69,7 @@ const getCommonConfig = (env) =>
           },
           {
             test:    REGEXPS.assets,
-            include: PATHS.componentAssets,
+            // include: PATHS.componentAssets,
             use:     {
               loader:  'url-loader',
               options: {
