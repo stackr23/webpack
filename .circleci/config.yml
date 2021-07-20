@@ -1,13 +1,20 @@
 version: 2.1
-orbs:
-  node: circleci/node@4.5.1
 workflows:
-  matrix-tests:
+  build:
     jobs:
-      - node/test:
+      - build:
           matrix:
             parameters:
-              version:
-                - 13.11.0
-                - 12.16.0
-                - 10.19.0
+              os: [linux, macos]
+              node_version: [6, 8, 10]
+          name: build-<< matrix.os >>-<< matrix.node_version >>
+      - test:
+          matrix:
+            parameters:
+              os: [linux, macos]
+              node_version: [6, 8, 10]
+          name: test-<< matrix.os >>-<< matrix.node_version >>
+          # Templated dependency:
+          # "Each `test` job depends on its corresponding `build` job"
+          requires:
+            - build-<< matrix.os >>-<< matrix.node_version >>
