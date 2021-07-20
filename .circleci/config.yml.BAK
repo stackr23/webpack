@@ -1,0 +1,77 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.5.1
+
+# executors:
+#   linux:
+#     docker:
+#       - image: circleci/node:13 # cimg/node:16.4.1
+
+jobs:
+  - node/test
+      matrix:
+        parameters:
+          version:
+            - 13.11.0
+            - 12.16.0
+            - 10.19.0
+    steps:
+      - checkout
+      - node/install
+      - run: npm test
+  build:
+    parameters:
+      node-version:
+        type: string
+    docker:
+      - image: cimg/node:16.4.1
+    steps:
+      - checkout
+      - node/install
+      - run: npm run build
+
+workflows:
+  'Test and Build':
+    jobs:
+      - test:
+          matrix:
+            parameters:
+              node-version: ['10.0.0', '11.0.0', '12.0.0']
+      - build:
+          matrix:
+            parameters:
+              node-version: ['10.0.0', '11.0.0', '12.0.0']
+# jobs:
+#   test-and-build:
+#     steps:
+#       - checkout
+#       - node/install:
+#           node-version: << parameters.node-version >>
+#       - run: # node/test
+#           name: Test
+#           command: npm test
+#       - run:
+#           name: Test
+#           command: npm run test
+#       - run:
+#           name: Build
+#           command: npm run build
+#   semantic_release: #only running if added to workflow jobs
+#     docker:
+#       - image: circleci/node:12.9.0
+#     steps:
+#       - checkout
+#       - run:
+#           name: Install 'semantic-release' modules
+#           command: |
+#             npm i -g @stackr23/conventional-changelog-config 2> /dev/null && npm i -g @stackr23/preset-conventional-changelog 2> /dev/null
+#             npm i --no-save semantic-release-cli @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/git @semantic-release/github @semantic-release/npm @semantic-release/release-notes-generator
+#       - run:
+#           name: Run 'semantic-release'
+#           command: npx semantic-release
+
+# workflows:
+#   version: 2
+#   test:
+#     jobs:
+#       - test-and-build
