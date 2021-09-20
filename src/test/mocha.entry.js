@@ -1,4 +1,4 @@
-const EmzymeAdapterReact = require('enzyme-adapter-react-16')
+const EmzymeAdapterReact = require('@wojtekmaj/enzyme-adapter-react-17')
 require('enzyme').configure({ adapter: new EmzymeAdapterReact() })
 // require bridge module after adapter is set
 require('chai').use(require('chai-enzyme')())
