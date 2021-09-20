@@ -1,47 +1,59 @@
 {
-  "branches": ["master"],
+  "branches": ["master", "main"],
   "repositoryUrl": "https://github.com/stackr23/webpack",
   "plugins": [
    [
     "@semantic-release/commit-analyzer",
       {
-        "preset": "angular",
-        "parserOpts": {
-          "noteKeywords": [
-            "BREAKING CHANGE",
-            "BREAKING CHANGES",
-            "BREAKING"
-          ]
-        }
+        "config": "@stackr23/preset-conventional-changelog",
+        "releaseRules": [
+          {
+            "type": "feat",
+            "release": "minor"
+          },
+          {
+            "type": "fix",
+            "release": "patch"
+          },
+          {
+            "type": "config",
+            "release": "patch"
+          },
+          {
+            "type": "script",
+            "release": "patch"
+          },
+          {
+            "type": "style",
+            "release": "patch"
+          },
+          {
+            "type": "deps",
+            "release": "patch"
+          }
+        ]
       }
     ],
     [
       "@semantic-release/release-notes-generator",
       {
-        "preset": "angular",
-        "parserOpts": {
-          "noteKeywords": [
-            "BREAKING CHANGE",
-            "BREAKING CHANGES",
-            "BREAKING"
-          ]
-        },
-        "writerOpts": {
-          "commitsSort": [
-            "subject",
-            "scope"
-          ]
-        }
+        "config": "@stackr23/preset-conventional-changelog"
       }
     ],
     [
       "@semantic-release/changelog",
       {
         "changelogFile": "CHANGELOG.md",
-        "changelogTitle": "# Changelog\n\n> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)"
+        "changelogTitle": "# Changelog\n\n> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)\n\n"
       }
     ],
-    ["@semantic-release/npm"],
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": true,
+        "tarballDir": "releases"
+      }
+    ],
     [
       "@semantic-release/git",
       {
@@ -54,11 +66,6 @@
     ],
     [
       "@semantic-release/github"
-    ],
-    ["semantic-release-slack-bot", {
-        "notifyOnSuccess": true,
-        "notifyOnFail": false,
-        "markdownReleaseNotes": true
-      }]
+    ]
   ]
 }
