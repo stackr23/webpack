@@ -11,7 +11,7 @@
     "test": "npm run lint && npm run build && npm run karma",
     "karma": "cross-env WEBPACK_PATH=test karma start ./src/test/karma.config.js",
     "lint": "cross-env WEBPACK_PATH=test eslint --fix \"**/*.*{js,jsx,ts,tsx}\" --ignore-pattern \"build/**/*\"",
-    "format": "prettier **/*.{css,scss,md,json} --write"
+    "format": "prettier **/*.{css,scss,md,json,yml} --write"
   },
   "homepage": "https://github.com/stackr23",
   "repository": {
