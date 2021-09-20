@@ -31,7 +31,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false
   },
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*", "./test/**/*"],
   "exclude": ["**/*.spec.*"],
   "awesomeTypescriptLoaderOptions": {
     "reportFiles": ["./src/**/*.{ts,tsx}"],
