@@ -48,10 +48,10 @@
     }
   },
   "lint-staged": {
-    "*.{css,scss,json,md}": [
+    "*.{css,scss,json,md,yml}": [
       "prettier --write"
     ],
-    "*.{js,jsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --fix --quiet"
     ]
   },
