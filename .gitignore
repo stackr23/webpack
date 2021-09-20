@@ -1,2 +1,17 @@
-node_modules
-build
+# build files
+dist/
+build/
+*cache/
+
+# node
+node_modules/
+
+#log files
+*.log
+
+# misc
+.DS_Store
+Thumbs.db
+.idea/
+*.sublime-project
+*.sublime-workspace
