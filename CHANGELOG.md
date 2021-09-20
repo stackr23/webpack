@@ -4,6 +4,20 @@
 
 
 
+## [2.1.1](https://github.com/stackr23/webpack/compare/v2.1.0...v2.1.1) (2021-09-20)
+
+
+### :beetle: Bug Fixes
+
+* **tests:** migrate react to v17 ([4dd0afa](https://github.com/stackr23/webpack/commit/4dd0afad6f373f98299c0aec85bbe235de7d05c0))
+
+
+### :wrench: Configs
+
+* **npm:** add TS files to lint task ([518868d](https://github.com/stackr23/webpack/commit/518868d014714cc4170e11a79d8174ca43d0f17b))
+* **npm:** add yaml files to format task ([e1ae10f](https://github.com/stackr23/webpack/commit/e1ae10f38c21f2eca0b8cf1df114906bb50f0448))
+* **npm:** use quiet mode in lint task ([bce5f83](https://github.com/stackr23/webpack/commit/bce5f83ad5cceb8249b3f1626b0f88d14de32496))
+
 # [2.1.0](https://github.com/stackr23/webpack/compare/v2.0.0...v2.1.0) (2021-09-20)
 
 
