@@ -1,3 +1,30 @@
+# Changelog
+
+> generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
+
+
+
+# [2.1.0](https://github.com/stackr23/webpack/compare/v2.0.0...v2.1.0) (2021-09-20)
+
+
+### :sparkles: Features
+
+* **CI:** migrate to github actions ([#7](https://github.com/stackr23/webpack/issues/7)) ([2d99656](https://github.com/stackr23/webpack/commit/2d99656333ce959d7a1fb2c30ed205f04b7a89ef))
+
+
+### :beetle: Bug Fixes
+
+* **CI:** update semantic-release config ([d705539](https://github.com/stackr23/webpack/commit/d705539817b0b2318edc663b75dba0dbf5954da7))
+
+
+### :wrench: Configs
+
+* **git:** extend gitignore ([8417d3e](https://github.com/stackr23/webpack/commit/8417d3e1ecda47e1fc4ad7c8fcf18db86fe0c0cd))
+* **lint-staged:** add yml and TS files ([2395ed5](https://github.com/stackr23/webpack/commit/2395ed58743e92a174eaf4625abc7426287e6bd9))
+* **TS:** add 'test' dir to `include` paths ([c4a63f6](https://github.com/stackr23/webpack/commit/c4a63f669b97c9fcad8d210d167afad5cffdeaa4))
+* **TS:** update tsconfig ([a0a4743](https://github.com/stackr23/webpack/commit/a0a474372250d836436c181254a41f222a061b13))
+* **vsCode:** remove linter/formatter settings ([eacdfe6](https://github.com/stackr23/webpack/commit/eacdfe62db7251aaa5a284b07c616360d7a7e4e9))
+
 ## 2.0.0
 
 > cleaned and refactored
