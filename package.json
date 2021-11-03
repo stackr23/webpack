@@ -1,6 +1,6 @@
 {
   "name": "@stackr23/webpack",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "shared webpack config of StackR23",
   "main": "index.js",
   "scripts": {

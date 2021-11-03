@@ -4,6 +4,14 @@
 
 
 
+## [2.1.2](https://github.com/stackr23/webpack/compare/v2.1.1...v2.1.2) (2021-11-03)
+
+
+### :package: Dependencies
+
+* upgrade babel packages ([2701f2c](https://github.com/stackr23/webpack/commit/2701f2cd35568a97e6ae5f019026bdba0b34e027))
+* upgrade webpack related pckgs ([0c636f1](https://github.com/stackr23/webpack/commit/0c636f108765137754081ba0ed6f6488c9b9e86f))
+
 ## [2.1.1](https://github.com/stackr23/webpack/compare/v2.1.0...v2.1.1) (2021-09-20)
 
 
