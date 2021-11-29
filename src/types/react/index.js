@@ -1,4 +1,4 @@
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 
 const getCommonConfig = require('./common.config')
 const getDevelopConfig = require('./develop.config')

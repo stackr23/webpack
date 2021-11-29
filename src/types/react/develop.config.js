@@ -1,4 +1,4 @@
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const ip = require('ip').address()
 const webpack = require('webpack')
 

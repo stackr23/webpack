@@ -1,7 +1,10 @@
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 
 const { setEnvVariable } = require('../../utils')
 const { PATHS } = require('../../constants')
+
+
+setEnvVariable('process.env.NODE_ENV', 'production')
 
 exports.config = merge([
   {
@@ -22,5 +25,4 @@ exports.config = merge([
       },
     },
   },
-  setEnvVariable('process.env.NODE_ENV', 'production'),
 ])
