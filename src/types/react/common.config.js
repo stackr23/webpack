@@ -42,8 +42,8 @@ const getCommonConfig = (env) =>
                 },
               },
               {
-                loader: 'sass-loader',
-                query:  {
+                loader:  'sass-loader',
+                options:  {
                   sourceMap:   true,
                   sassOptions: {
                     includePaths: [
