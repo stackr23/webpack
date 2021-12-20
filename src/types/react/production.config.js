@@ -17,7 +17,7 @@ exports.config = merge([
       splitChunks: {
         chunks:      'all',
         cacheGroups: {
-          vendor: {
+          defaultVendors: {
             test:     /[\\/]node_modules[\\/]/,
             priority: 1,
           },
