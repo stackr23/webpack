@@ -7,7 +7,7 @@ const mock = require('./mock.config')
 const { addEnvVariables } = require('../../utils')
 
 module.exports = (env) => {
-  addEnvVariables()
+  // TODO: refactor env/mode usage and config merging
   const configCommon = getCommonConfig(env)
 
   if (env === 'production') {
@@ -17,7 +17,5 @@ module.exports = (env) => {
   const developConfig = getDevelopConfig(env)
   const configDev = merge(configCommon, developConfig)
 
-  return env === 'development_mock'
-    ? merge(configDev, mock.config, addEnvVariables())
-    : merge(configDev, addEnvVariables())
+  return merge(configDev, (env === 'development_mock' && mock.config))
 }
