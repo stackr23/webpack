@@ -1,5 +1,8 @@
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 
-const utils = require('../../utils')
+const getDevelopConfig = require('./develop.config')
+const { setEnvVariable } = require('../../utils')
 
-exports.config = merge([ utils.setEnvVariable('process.env.NODE_ENV', 'mock') ])
+setEnvVariable('process.env.NODE_ENV', 'mock')
+
+exports.config =  merge(getDevelopConfig('development_mock'))

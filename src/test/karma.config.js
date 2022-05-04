@@ -67,7 +67,7 @@ module.exports = (config) => {
     // overwrite 'webpack' configuration
     webpack: {
       ...configCommon,
-      mode:      'development',
+      mode:      process.env.NODE_ENV || 'production',
       devtool:   'inline-source-map',
       externals: {
         domutils: 'true',

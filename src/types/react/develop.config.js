@@ -1,4 +1,4 @@
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const ip = require('ip').address()
 const webpack = require('webpack')
 
@@ -13,19 +13,29 @@ const getDevelopConfig = () => {
   return merge([
     {
       devServer: {
-        'public':    ip ? `${ip}:${PORT}` : null,
-        host:        process.env.HOST || '0.0.0.0',
-        port:        PORT,
-        contentBase: PATHS.build,
-        hot:         true,
-        overlay:     {
-          warnings: false,
-          errors:   true,
+        host:               'local-ip',
+        port:               PORT,
+        // contentBase:        PATHS.build, // deprecated... substitute not needed!?!?
+        hot:                true,
+        liveReload:         false,
+        compress:           true,
+        magicHtml:          true,
+        open:               true,
+        historyApiFallback: true,
+        client:             {
+          logging: 'error',
+          overlay: {
+            errors:   true,
+            warnings: false,
+          },
+          progress:  true,
+          reconnect: 3,
         },
-        before: stackr23Middlewares,
+        // before: stackr23Middlewares,
+        setupExitSignals: true,
       },
-      devtool: 'eval-source-map',
-      output:  {
+      devtool:       'eval-source-map',
+      output:        {
         devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]',
       },
       plugins: [ new webpack.HotModuleReplacementPlugin() ],
