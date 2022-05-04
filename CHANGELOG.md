@@ -4,6 +4,33 @@
 
 
 
+# [2.2.0](https://github.com/stackr23/webpack/compare/v2.1.2...v2.2.0) (2022-05-04)
+
+
+### :sparkles: Features
+
+* migrate to webpack v5 ! BREAKING CHANGE ! ([#13](https://github.com/stackr23/webpack/issues/13)) ([019487f](https://github.com/stackr23/webpack/commit/019487f616d109794779b3e9b9940bb79b2e0ade)), closes [#4](https://github.com/stackr23/webpack/issues/4)
+
+
+### BREAKING CHANGES
+
+* for `webpack@4` use `@stackr23/webpack@2`
+
+* deps: upgrade webpack packages
+`webpack`, `webpack-cli`, `webpack-dev-server`, `webpack-merge`
+* deps: upgrade other webpack releated pckgs
+  * webpack-helpers: `copy-webpack-plugin`, `html-webpack-plugin`, `mini-css-extract-plugin`
+  * webpack-loaders: `loader-utils`, `css-loader`, `postcss-loader"`, `sass-loader`, `source-map-loader`, `style-loader`
+* deps: upgrade `karma-webpack` to v5
+* deps: update post-css packages
+
+* refactor(webpack-merge): migrate to new version
+* refactor: migrate `post-css` options to v8
+* refactor: migrate  options to webpack v5
+  * `splitChunks.cacheGroups.vendors` → `splitChunks.cacheGroups.defaultVendors`
+  * change `sass-loader`s 'query' key to 'options'
+* refactor: remove `addEnvVariables()` in merge fn
+
 ## [2.1.2](https://github.com/stackr23/webpack/compare/v2.1.1...v2.1.2) (2021-11-03)
 
 
