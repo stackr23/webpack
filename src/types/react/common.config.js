@@ -37,8 +37,16 @@ const getCommonConfig = (env) =>
               {
                 loader:  'postcss-loader',
                 options: {
-                  ident:   'postcss',
-                  plugins: (loader) => [ require('postcss-preset-env')() ],
+                  postcssOptions: {
+                    plugins: [
+                      [
+                        'postcss-preset-env',
+                        {
+                          // Options
+                        },
+                      ],
+                    ],
+                  },
                 },
               },
               {
@@ -51,11 +59,11 @@ const getCommonConfig = (env) =>
                       `${path.basename(PATHS.src)}/sass`,
                       './css', // ! compatibility with old setting
                       // TODO: ? use sass-resource-loader
-                      // TODO: apply @stackr23/stylus
                     ],
                   },
                 },
               },
+              // TODO: add stylus-loader and apply @stackr23/stylus
             ],
           },
           {
