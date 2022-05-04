@@ -2,7 +2,7 @@
 // react-svg-loader for ui and icons -> JSX output
 // svgo into file-loader for svg assets (content images)
 const path = require('path')
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CheckerPlugin } = require('awesome-typescript-loader')
@@ -37,13 +37,21 @@ const getCommonConfig = (env) =>
               {
                 loader:  'postcss-loader',
                 options: {
-                  ident:   'postcss',
-                  plugins: (loader) => [ require('postcss-preset-env')() ],
+                  postcssOptions: {
+                    plugins: [
+                      [
+                        'postcss-preset-env',
+                        {
+                          // Options
+                        },
+                      ],
+                    ],
+                  },
                 },
               },
               {
-                loader: 'sass-loader',
-                query:  {
+                loader:  'sass-loader',
+                options:  {
                   sourceMap:   true,
                   sassOptions: {
                     includePaths: [
@@ -51,11 +59,11 @@ const getCommonConfig = (env) =>
                       `${path.basename(PATHS.src)}/sass`,
                       './css', // ! compatibility with old setting
                       // TODO: ? use sass-resource-loader
-                      // TODO: apply @stackr23/stylus
                     ],
                   },
                 },
               },
+              // TODO: add stylus-loader and apply @stackr23/stylus
             ],
           },
           {

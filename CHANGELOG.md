@@ -2,50 +2,74 @@
 
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
+# [3.0.0](https://github.com/stackr23/webpack/compare/v2.1.2...v3.0.0) (2022-05-04)
 
+### 🚨 BREAKING CHANGE
 
-## [2.1.2](https://github.com/stackr23/webpack/compare/v2.1.1...v2.1.2) (2021-11-03)
-
+- migrate to webpack v5 ([#13](https://github.com/stackr23/webpack/issues/13)) ([019487f](https://github.com/stackr23/webpack/commit/019487f616d109794779b3e9b9940bb79b2e0ade)), closes [#4](https://github.com/stackr23/webpack/issues/4)
 
 ### :package: Dependencies
 
-* upgrade babel packages ([2701f2c](https://github.com/stackr23/webpack/commit/2701f2cd35568a97e6ae5f019026bdba0b34e027))
-* upgrade webpack related pckgs ([0c636f1](https://github.com/stackr23/webpack/commit/0c636f108765137754081ba0ed6f6488c9b9e86f))
+- deps: upgrade webpack packages
+  `webpack`, `webpack-cli`, `webpack-dev-server`, `webpack-merge`
+- deps: upgrade other webpack releated pckgs
+  - webpack-helpers: `copy-webpack-plugin`, `html-webpack-plugin`, `mini-css-extract-plugin`
+  - webpack-loaders: `loader-utils`, `css-loader`, `postcss-loader"`, `sass-loader`, `source-map-loader`, `style-loader`
+- deps: upgrade `karma-webpack` to v5
+- deps: update post-css packages
+
+### :building_construction: Refactoring
+
+- refactor(webpack-merge): migrate to new version
+- refactor: migrate `post-css` options to v8
+- refactor: migrate options to webpack v5
+  - `splitChunks.cacheGroups.vendors` → `splitChunks.cacheGroups.defaultVendors`
+  - change `sass-loader`s 'query' key to 'options'
+- refactor: remove `addEnvVariables()` in merge fn
+
+## [2.1.2](https://github.com/stackr23/webpack/compare/v2.1.1...v2.1.2) (2021-11-03)
+
+### :package: Dependencies
+
+- upgrade babel packages ([2701f2c](https://github.com/stackr23/webpack/commit/2701f2cd35568a97e6ae5f019026bdba0b34e027))
+- upgrade webpack related pckgs ([0c636f1](https://github.com/stackr23/webpack/commit/0c636f108765137754081ba0ed6f6488c9b9e86f))
+
+## [2.1.2](https://github.com/stackr23/webpack/compare/v2.1.1...v2.1.2) (2021-11-03)
+
+### :package: Dependencies
+
+- upgrade babel packages ([2701f2c](https://github.com/stackr23/webpack/commit/2701f2cd35568a97e6ae5f019026bdba0b34e027))
+- upgrade webpack related pckgs ([0c636f1](https://github.com/stackr23/webpack/commit/0c636f108765137754081ba0ed6f6488c9b9e86f))
 
 ## [2.1.1](https://github.com/stackr23/webpack/compare/v2.1.0...v2.1.1) (2021-09-20)
 
-
 ### :beetle: Bug Fixes
 
-* **tests:** migrate react to v17 ([4dd0afa](https://github.com/stackr23/webpack/commit/4dd0afad6f373f98299c0aec85bbe235de7d05c0))
-
+- **tests:** migrate react to v17 ([4dd0afa](https://github.com/stackr23/webpack/commit/4dd0afad6f373f98299c0aec85bbe235de7d05c0))
 
 ### :wrench: Configs
 
-* **npm:** add TS files to lint task ([518868d](https://github.com/stackr23/webpack/commit/518868d014714cc4170e11a79d8174ca43d0f17b))
-* **npm:** add yaml files to format task ([e1ae10f](https://github.com/stackr23/webpack/commit/e1ae10f38c21f2eca0b8cf1df114906bb50f0448))
-* **npm:** use quiet mode in lint task ([bce5f83](https://github.com/stackr23/webpack/commit/bce5f83ad5cceb8249b3f1626b0f88d14de32496))
+- **npm:** add TS files to lint task ([518868d](https://github.com/stackr23/webpack/commit/518868d014714cc4170e11a79d8174ca43d0f17b))
+- **npm:** add yaml files to format task ([e1ae10f](https://github.com/stackr23/webpack/commit/e1ae10f38c21f2eca0b8cf1df114906bb50f0448))
+- **npm:** use quiet mode in lint task ([bce5f83](https://github.com/stackr23/webpack/commit/bce5f83ad5cceb8249b3f1626b0f88d14de32496))
 
 # [2.1.0](https://github.com/stackr23/webpack/compare/v2.0.0...v2.1.0) (2021-09-20)
 
-
 ### :sparkles: Features
 
-* **CI:** migrate to github actions ([#7](https://github.com/stackr23/webpack/issues/7)) ([2d99656](https://github.com/stackr23/webpack/commit/2d99656333ce959d7a1fb2c30ed205f04b7a89ef))
-
+- **CI:** migrate to github actions ([#7](https://github.com/stackr23/webpack/issues/7)) ([2d99656](https://github.com/stackr23/webpack/commit/2d99656333ce959d7a1fb2c30ed205f04b7a89ef))
 
 ### :beetle: Bug Fixes
 
-* **CI:** update semantic-release config ([d705539](https://github.com/stackr23/webpack/commit/d705539817b0b2318edc663b75dba0dbf5954da7))
-
+- **CI:** update semantic-release config ([d705539](https://github.com/stackr23/webpack/commit/d705539817b0b2318edc663b75dba0dbf5954da7))
 
 ### :wrench: Configs
 
-* **git:** extend gitignore ([8417d3e](https://github.com/stackr23/webpack/commit/8417d3e1ecda47e1fc4ad7c8fcf18db86fe0c0cd))
-* **lint-staged:** add yml and TS files ([2395ed5](https://github.com/stackr23/webpack/commit/2395ed58743e92a174eaf4625abc7426287e6bd9))
-* **TS:** add 'test' dir to `include` paths ([c4a63f6](https://github.com/stackr23/webpack/commit/c4a63f669b97c9fcad8d210d167afad5cffdeaa4))
-* **TS:** update tsconfig ([a0a4743](https://github.com/stackr23/webpack/commit/a0a474372250d836436c181254a41f222a061b13))
-* **vsCode:** remove linter/formatter settings ([eacdfe6](https://github.com/stackr23/webpack/commit/eacdfe62db7251aaa5a284b07c616360d7a7e4e9))
+- **git:** extend gitignore ([8417d3e](https://github.com/stackr23/webpack/commit/8417d3e1ecda47e1fc4ad7c8fcf18db86fe0c0cd))
+- **lint-staged:** add yml and TS files ([2395ed5](https://github.com/stackr23/webpack/commit/2395ed58743e92a174eaf4625abc7426287e6bd9))
+- **TS:** add 'test' dir to `include` paths ([c4a63f6](https://github.com/stackr23/webpack/commit/c4a63f669b97c9fcad8d210d167afad5cffdeaa4))
+- **TS:** update tsconfig ([a0a4743](https://github.com/stackr23/webpack/commit/a0a474372250d836436c181254a41f222a061b13))
+- **vsCode:** remove linter/formatter settings ([eacdfe6](https://github.com/stackr23/webpack/commit/eacdfe62db7251aaa5a284b07c616360d7a7e4e9))
 
 ## 2.0.0
 
