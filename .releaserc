@@ -1,37 +1,42 @@
 {
-  "branches": ["master", "main"],
+  "branches": [
+    "master",
+    "main"
+  ],
   "repositoryUrl": "https://github.com/stackr23/webpack",
   "plugins": [
-   [
-    "@semantic-release/commit-analyzer",
+    [
+      "@semantic-release/commit-analyzer",
       {
         "config": "@stackr23/preset-conventional-changelog",
-        "releaseRules": [
-          {
-            "type": "feat",
-            "release": "minor"
-          },
-          {
-            "type": "fix",
-            "release": "patch"
-          },
-          {
-            "type": "config",
-            "release": "patch"
-          },
-          {
-            "type": "script",
-            "release": "patch"
-          },
-          {
-            "type": "style",
-            "release": "patch"
-          },
-          {
-            "type": "deps",
-            "release": "patch"
-          }
-        ]
+        "parserOpts": {
+          "releaseRules": [
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "config",
+              "release": "patch"
+            },
+            {
+              "type": "script",
+              "release": "patch"
+            },
+            {
+              "type": "style",
+              "release": "patch"
+            },
+            {
+              "type": "deps",
+              "release": "patch"
+            }
+          ]
+        }
       }
     ],
     [
